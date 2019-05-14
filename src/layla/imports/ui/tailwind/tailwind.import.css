@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: .25rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  @apply font-normal;
+  display: inline-block;
+}
+
+.btn-blue {
+  @apply text-white bg-blue-500;
+}
+
+.btn-blue:hover {
+  @apply bg-blue-400;
+}
+
+.btn-red {
+  @apply text-white bg-red-500;
+}
+
+.btn-red:hover {
+  @apply bg-red-400;
+}
+
+.btn-pink {
+  @apply text-white bg-pink-500;
+}
+
+.btn-pink:hover {
+  @apply bg-pink-400;
+}
+
+.btn-green {
+  @apply text-white bg-green-500;
+}
+
+.btn-green:hover {
+  @apply bg-green-400;
+}

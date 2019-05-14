@@ -1,0 +1,34 @@
+{
+  "name": "layla",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run build-css && meteor run --port 4000 --settings ./settings.json",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "build-css": "./node_modules/.bin/tailwind build ./imports/ui/tailwind/tailwind.import.css -c  tailwind.js -o ./imports/ui/tailwind/tailwind.css"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "lodash": "^4.17.11",
+    "meteor-node-stubs": "^0.4.1",
+    "react": "^16.5.0",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.5.0",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "bootstrap": "github:teama-io/bootstrap#master",
+    "redux-devtools": "^3.5.0",
+    "tailwindcss": "^1.0.1"
+  }
+}
